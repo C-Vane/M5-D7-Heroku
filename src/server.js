@@ -10,7 +10,7 @@ server.use(cors());
 server.use(express.json());
 
 // set up cors
-/* const whiteList = process.env.NODE_ENV === "production" ? [process.env.FE_URL_PROD] : [process.env.FE_URL_DEV];
+const whiteList = process.env.NODE_ENV === "production" ? [process.env.FE_URL_PROD] : [process.env.FE_URL_DEV];
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -24,7 +24,7 @@ const corsOptions = {
   },
 };
 server.use(cors(corsOptions));
- */
+
 ///APP ROUTES
 server.use("/books", booksRoutes);
 //HANDLE ERRORS
